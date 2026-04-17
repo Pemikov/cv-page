@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter Kovacs | CV</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.top-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+body.dark button {
+  background: #333;
+  color: #fff;
+}
+
+.time {
+  font-size: 0.85em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.job {
+  margin-bottom: 15px;
+}
+
+.small {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.contact a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.email {
+  cursor: pointer;
+  color: #0073e6;
+}
+
+.badge {
+  display: inline-block;
+  background: #e3eaf2;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 0.85em;
+}
+
+body.dark .badge {
+  background: #2a2a2a;
+}
+
+p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div class="top-controls">
+  <div class="time" id="time"></div>
+  <button onclick="toggleTheme()">Day/Night</button>
+  <button onclick="toggleLang()">EN/HU</button>
+</div>
+
+<h1>Peter M. Kovacs</h1>
+<p id="title"></p>
+
+<div class="contact">
+  <p>📍 South Elmsall | 📞 07305 183634</p>
+  <p>
+    Email: <span id="email" class="email" onclick="copyEmail()">pemikovacs@gmail.com</span> |
+    <a href="https://www.linkedin.com/in/peter-k-52b78961/" target="_blank">LinkedIn</a>
+  </p>
+</div>
+
+</header>
+
+<section class="section">
+<h2 id="profileHeader"></h2>
+<p id="profileText"></p>
+</section>
+
+<section class="section">
+<h2 id="expHeader"></h2>
+
+<div class="job">
+<strong id="job1Title"></strong>
+<div class="small" id="job1Date"></div>
+<p id="job1Desc"></p>
+</div>
+
+<div class="job">
+<strong id="job2Title"></strong>
+<div class="small" id="job2Date"></div>
+<p id="job2Desc1"></p>
+<p id="job2Desc2"></p>
+<p id="job2Desc3"></p>
+</div>
+
+<div class="job">
+<strong id="job3Title"></strong>
+<div class="small" id="job3Date"></div>
+<p id="job3Desc"></p>
+<p id="job3Link"></p>
+</div>
+
+<div class="job">
+<strong id="job4Title"></strong>
+<div class="small" id="job4Date"></div>
+<p id="job4Desc"></p>
+<p id="job4Link"></p>
+</div>
+
+<div class="job">
+<strong id="job5Title"></strong>
+<div class="small" id="job5Date"></div>
+<p id="job5Desc"></p>
+<p id="job5Link"></p>
+</div>
+
+<div class="job">
+<strong id="job6Title"></strong>
+<div class="small" id="job6Date"></div>
+<p id="job6Desc"></p>
+<p id="job6Link"></p>
+</div>
+
+</section>
+
+<section class="section">
+<h2 id="skillsHeader"></h2>
+<div>
+<span class="badge">AWS</span>
+<span class="badge">GCP</span>
+<span class="badge">Azure</span>
+<span class="badge">Linux/Ubuntu</span>
+<span class="badge">Bash</span>
+<span class="badge">SQL</span>
+<span class="badge">Docker</span>
+<span class="badge">Terraform</span>
+<span class="badge">Kubernetes</span>
+<span class="badge">Git</span>
+<span class="badge">CI/CD</span>
+<span class="badge">Kibana</span>
+<span class="badge">Jira</span>
+<span class="badge">Confluence</span>
+<span class="badge">Postman</span>
+<span class="badge">DBeaver</span>
+<span class="badge">Grafana</span>
+<span class="badge">Prometheus</span>
+<span class="badge">Adobe Suite</span>
+<span class="badge">InDesign</span>
+<span class="badge">Photoshop</span>
+<span class="badge">Illustrator</span>
+<span class="badge">Premier Pro</span>
+<span class="badge">Slack</span>
+<span class="badge">Wordpress</span>
+<span class="badge">FluentForm</span>
+<span class="badge">Xero</span>
+<span class="badge">Stripe</span>
+<span class="badge">GoCardless</span>
+<span class="badge">MRPEasy</span>
+<span class="badge">NetSuite</span>
+<span class="badge">SAP</span>
+<span class="badge">FreshDesk</span>
+<span class="badge">ServiceM8</span>
+<span class="badge">Squeegee</span>
+</div>
+</section>
+
+<section class="section">
+<h2 id="toolsHeader"></h2>
+<p id="toolsText"></p>
+</section>
+
+<section class="section">
+<h2 id="eduHeader"></h2>
+<p id="edu1"></p>
+<p id="edu2"></p>
+<p id="edu3"></p>
+<p id="edu4"></p>
+<p id="edu5"></p>
+<p id="edu6"></p>
+<p id="edu7"></p>
+<p id="edu8"></p>
+<p id="edu9"></p>
+<p id="edu10"></p>
+<p id="edu11"></p>
+<p id="edu12"></p>
+<p id="edu13"></p>
+</section>
+
+<section class="section">
+<h2 id="langHeader"></h2>
+<p id="langText"></p>
+</section>
+
+</div>
+
+<script>
+const translations = {
+  en: {
+    title: "TechOps | DevOps & Systems Engineer",
+    profileHeader: "Profile",
+    profileText: "Technical professional specialising in systems, cloud infrastructure, and engineering. Experienced in maintaining and optimising distributed production environments, with strong expertise in troubleshooting, automation, and system reliability. Adaptable across industries including smart city technology, logistics, and technical operations.",
+    expHeader: "Experience",
+
+    job1Title: "Kovacs Solutions Ltd, South Elmsall — Owner",
+    job1Date: "January 2025 - December 2025",
+    job1Desc: "Managed end-to-end operations of a property maintenance, water testing, and external cleaning business. Oversaw client relationships, scheduling, marketing, and accounting integrations while maintaining high service standards. Designed and maintained the company website and implemented growth strategies, culminating in a successful business sale to a partner company.",
+
+    job2Title: "Vivacity Labs, London — Senior Remote Engineer and TechOps",
+    job2Date: "June 2021 - December 2025",
+    job2Desc1: "Supported large-scale production environments running Ubuntu-based embedded systems on NVIDIA Tegra hardware. Performed advanced diagnostics and log analysis via SSH, resolving system, networking, and application-level issues while deploying firmware and OS updates across distributed infrastructure.",
+    job2Desc2: "Worked with AWS IoT Core and cloud services including S3, DynamoDB, IAM, and GCP Cloud Storage to maintain data pipelines and integrations. Queried and analysed data using PostgreSQL and SQL, and automated operational workflows using Bash scripting.",
+    job2Desc3: "Developed internal tooling with Streamlit, including a centralised dashboard for system access and configuration management. Managed incidents via Jira and Freshdesk, implemented automation and Slack integrations, monitored systems using Kibana, and maintained technical documentation in Confluence.",
+
+    job3Title: "Vivacity Labs — Smart City Field & Build Engineer",
+    job3Date: "September 2017 - June 2021",
+    job3Desc: "Installed, configured, and maintained smart city sensor systems across the UK. Led field deployments, performed diagnostics, and delivered both on-site and remote troubleshooting. Conducted quality assurance checks and data validation to ensure system accuracy and reliability. Managed component stock and produced technical documentation, including build manuals and training materials.",
+    job3Link: "www.vivacitylabs.com",
+
+    job4Title: "Amazon Flex, Dunstable — Delivery Driver",
+    job4Date: "April 2017 - September 2017",
+    job4Desc: "Delivered parcels across assigned routes with a strong focus on reliability, efficiency, and customer service. Managed time-sensitive schedules and ensured high delivery accuracy.",
+    job4Link: "flex.amazon.co.uk",
+
+    job5Title: "Superdrug Plc, Dunstable and Asda Wincaton — Picker/Packer and Team Leader",
+    job5Date: "September 2014 - April 2017 and February 2026 - April 2026",
+    job5Desc: "Supported warehouse operations across picking, packing, and team leadership roles. Supervised daily activities to meet productivity, safety, and quality targets. Coordinated team workloads, trained new staff, and improved operational efficiency through workflow optimisation.",
+    job5Link: "www.superdrug.com",
+
+    job6Title: "Globiz Kft, Debrecen — Designer",
+    job6Date: "February 2007 - March 2014",
+    job6Desc: "Designed branding materials and visual assets while supporting product presentation and marketing initiatives. Collaborated with suppliers and contributed to expanding the company’s product portfolio through new design and promotional strategies.",
+    job6Link: "www.globiz.hu",
+
+    eduHeader: "Education & Certifications",
+    edu1: "AWS Cloud Practitioner & Solution Architect",
+    edu2: "Azure Solution Architect",
+    edu3: "Telecommunication Engineer BTEC Level 3",
+    edu4: "Team Leading BTEC Level 2",
+    edu5: "Codecademy courses: HTML, CSS, Bash, JAVAScript, TypeScript, Python",
+    edu6: "Adobe suit courses in Adobe Premiere Pro, Illustrator, InDesign, and Photoshop",
+    edu7: "Safe Isolation G39 Electrical certificate",
+    edu8: "Powered Access Licence, Harness and Ladder training (IPAF / PAL / LADDER),",
+    edu9: "Traffic Management Certificate (LANTRA TTMBC)",
+    edu10: "CSCS (Construction Skills Certification Scheme)",
+    edu11: "Asbestos awareness, Legionella awareness, Manual handling, First aid at work",
+    edu12: "\n",
+    edu13: "SZC Pál Beregszászi Technical School, Debrecen — ICT and CS GCSE",
+    
+    langHeader: "Languages",
+    langText: "English | Hungarian"
+  },
+
+  hu: {
+    title: "TehcOps | DevOps és rendszer mérnök",
+    profileHeader: "Profil",
+    profileText: "Szakember, aki rendszerekre, felhő infrastruktúrára és mérnöki feladatokra specializálódott. Tapasztalt elosztott éles rendszerek üzemeltetésében és optimalizálásában, erős hibakeresési, automatizálási és rendszermegbízhatósági háttérrel. Gyorsan alkalmazkodik különböző iparágakhoz, beleértve az okos városi technológiákat, logisztikát és műszaki üzemeltetést.",
+    expHeader: "Tapasztalat",
+
+    job1Title: "Kovacs Solutions Ltd, South Elmsall — Tulajdonos",
+    job1Date: "2025 Január - 2025 December",
+    job1Desc: "Egy ingatlan karbantartással, vízteszteléssel és külső tisztítással foglalkozó vállalkozás teljes körű működésének irányítása. Ügyfélkapcsolatok, ütemezés, marketing és könyvelési integrációk felügyelete, magas szolgáltatási színvonal biztosítása mellett. A cég weboldalának tervezése és karbantartása, növekedési stratégiák megvalósítása, majd a vállalkozás sikeres értékesítése egy partner cég részére.",
+
+    job2Title: "Vivacity Labs, London — Senior Remote Engineer és TechOps",
+    job2Date: "2021 Június - 2025 December",
+    job2Desc1: "Ubuntu alapú beágyazott rendszereken futó, nagyméretű éles környezetek támogatása NVIDIA Tegra hardveren. Haladó szintű diagnosztika és log elemzés SSH-n keresztül, rendszer-, hálózati és alkalmazás szintű hibák megoldása, valamint firmware és operációs rendszer frissítések telepítése elosztott infrastruktúrában.",
+    job2Desc2: "AWS IoT Core és felhőszolgáltatások (S3, DynamoDB, IAM, GCP Cloud Storage) használata adatfolyamatok és integrációk fenntartására. Adatlekérdezés és elemzés PostgreSQL és SQL segítségével, valamint operatív folyamatok automatizálása Bash szkriptekkel.",
+    job2Desc3: "Belső eszközök fejlesztése Streamlit segítségével, központi dashboard kialakítása rendszerhozzáféréshez és konfiguráció kezeléshez. Incidenskezelés Jira és Freshdesk rendszerekben, automatizmusok és Slack integrációk kialakítása, monitorozás Kibana használatával, valamint technikai dokumentáció karbantartása Confluence-ben.",
+
+    job3Title: "Vivacity Labs — Okos városi Field és Build mérnök",
+    job3Date: "2017 Szeptember - 2021 Június",
+    job3Desc: "Okos városi szenzor rendszerek telepítése, konfigurálása és karbantartása az Egyesült Királyságban. Helyszíni telepítések irányítása, diagnosztika és hibakeresés helyben és távolról. Minőségellenőrzések és adatvalidáció végrehajtása a rendszer pontosságának és megbízhatóságának biztosítása érdekében. Alkatrészkészlet kezelése és műszaki dokumentációk készítése.",
+    job3Link: "www.vivacitylabs.com",
+
+    job4Title: "Amazon Flex, Dunstable — Futár",
+    job4Date: "2017 Április - 2017 Szeptember",
+    job4Desc: "Csomagok kézbesítése kijelölt útvonalakon, nagy hangsúlyt fektetve a megbízhatóságra, hatékonyságra és ügyfélkiszolgálásra. Időérzékeny ütemezések kezelése és magas szintű pontosság biztosítása.",
+    job4Link: "flex.amazon.co.uk",
+
+    job5Title: "Superdrug Plc, Dunstable és Asda Wincaton — Raktári dolgozó és csoportvezető",
+    job5Date: "2014 Szeptember - 2017 Április és 2026 Február - 2026 Április",
+    job5Desc: "Raktári műveletek támogatása komissiózás, csomagolás és csoportvezetés területén. Napi működés felügyelete a termelékenységi, biztonsági és minőségi célok elérése érdekében. Csapatmunkák koordinálása, új dolgozók betanítása és folyamatok optimalizálása a hatékonyság növelésére.",
+    job5Link: "www.superdrug.com",
+
+    job6Title: "Globiz Kft, Debrecen — Designer",
+    job6Date: "2007 Február - 2014 Március",
+    job6Desc: "Arculati elemek és vizuális anyagok tervezése, termékmegjelenítés és marketing tevékenységek támogatása mellett. Beszállítókkal való együttműködés és a termékportfólió bővítése új design és promóciós stratégiák alkalmazásával.",
+    job6Link: "www.globiz.hu",
+
+    eduHeader: "Oktatás és tanúsítványok",
+    edu1: "AWS Cloud Practitioner és Solution Architect",
+    edu2: "Azure Solution Architect",
+    edu3: "Telekommunikációs mérnök BTEC Level 3",
+    edu4: "Csoportvezetés BTEC Level 2",
+    edu5: "Codecademy tanfolyamok: HTML, CSS, Bash, JavaScript, TypeScript, Python",
+    edu6: "Adobe szoftverek képzései: Adobe Premiere Pro, Illustrator, InDesign és Photoshop",
+    edu7: "G39 elektromos biztonsági leválasztási tanúsítvány",
+    edu8: "Emelőgépes munkavégzési jogosítvány, hevederes és létra biztosítási képzés (IPAF / PAL / LADDER)",
+    edu9: "Forgalomirányítási tanúsítvány (LANTRA TTMBC)",
+    edu10: "CSCS (Építőipari Kompetencia Tanúsítási Rendszer)",
+    edu11: "Azbeszt- és legionella, kézi anyagmozgatás, elsősegélynyújtás munkahelyen tanfolyamok",
+    edu12: "\n",
+    edu13: "SZC Pál Beregszászi Technikum, Debrecen — Informatikai és számítástechnikai érettségi",
+
+    langHeader: "Nyelvek",
+    langText: "Angol | Magyar"
+  }
+};
+
+const elements = {};
+document.querySelectorAll("[id]").forEach(el => elements[el.id] = el);
+
+let currentLang = "en";
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  Object.keys(t).forEach(key => {
+    if (elements[key]) {
+      elements[key].innerText = t[key];
+    }
+  });
+}
+
+function toggleLang() {
+  currentLang = currentLang === "en" ? "hu" : "en";
+  applyLanguage(currentLang);
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+function updateTime() {
+  const now = new Date();
+  document.getElementById("time").innerText =
+    now.toLocaleDateString() + " " + now.toLocaleTimeString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+function copyEmail() {
+  navigator.clipboard.writeText("pemikovacs@gmail.com");
+  const msg = currentLang === "en" ? "Email copied" : "Email másolva";
+  alert(msg);
+}
+
+applyLanguage("en");
+</script>
+
+</body>
+</html>
